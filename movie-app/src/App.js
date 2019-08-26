@@ -34,8 +34,8 @@ function App() {
     /* Create a Movie component and give them two props, 'title' and 'poster' */
     <div className="App">
       {/* An array 'movies' has a function, something called a map.  Take this movies array and map through it */ }
-      {movies.map(movie => { /* Make a new array 'movie' */
-        return <Movie title={movie.title} poster={movie.poster} /> /* Make a Movie for each element inside of array 'movies'*/
+      {movies.map((movie, index) => { /* Make a new array 'movie'. 'index' is the current element number we are providing.  */
+        return <Movie title={movie.title} poster={movie.poster} key={index} /> /* Make a Movie for each element inside of array 'movies'*/
       })}
     </div>
   );
